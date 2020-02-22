@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head')  %> 
+        <title>Project</title>
+    </head>
+    <body id="movBody">
+        <header>Movies</header>
+        <% movies.results.forEach(({ title, overview, poster_path }) => {%> 
+                <div class="box">
+                    <div class="left">
+                        <img class="movies" src=<%=`${img}${poster_path}`%>>
+                    </div>
+                    <div class="right">
+                        <h3><%= `${title}` %> </h3>
+                        <p><%= `${overview}` %> </p>
+                    </div>
+                </div>
+                <%}) %>
+        <%- include('../partials/footer') %> 
+    </body>
+</html>
