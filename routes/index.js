@@ -7,9 +7,9 @@ const userController = require('../controllers/userController');
 require('../lib/passport');
 
 router.get('/', userController.home);
-router.get('/auth/menu', userController.menuOptions);
-router.get('/auth/random', userController.getRandomUsers);
-router.get('/auth/movies', userController.getMovies);
+router.get('/menu', userController.menuOptions);
+router.get('/random', userController.getRandomUsers);
+router.get('/movies', userController.getMovies);
 router.get('/api/users/logout', userController.logout);
 
 router.post('/api/users/register', [
@@ -21,7 +21,7 @@ router.post('/api/users/register', [
 ], userController.register);
 
 router.post('/api/users/login', passport.authenticate('local-login', {
-  successRedirect: '/auth/menu',
+  successRedirect: '/menu',
   failureRedirect: '/',
   failureFlash: true
   })

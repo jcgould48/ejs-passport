@@ -44,7 +44,7 @@ module.exports = {
                         if(err) {
                             return res.status(500).json({ message: 'Server Error' })
                         } else {
-                            return res.redirect('/auth/menu/')
+                            return res.redirect('/menu/')
                         }
                     })
                 })

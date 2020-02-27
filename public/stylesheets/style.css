@@ -24,6 +24,16 @@ header {
   margin-bottom: 40px;
 }
 
+h3 {
+  margin: 10;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0 0;
+  text-align: center;
+}
 .box {
   margin: 20px;
   display: flex;
@@ -38,16 +48,7 @@ header {
   margin: 10px;
 }
 
-h3 {
-  margin: 10;
-  text-align: center;
-}
 
-p {
-  margin: 0;
-  padding: 10px 0 0;
-  text-align: center;
-}
 
 .random {
   background-color: black;

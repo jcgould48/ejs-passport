@@ -8,6 +8,7 @@ let MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
+// const authRouter = require('./routes/auth');
 const app = express();
 
 require('dotenv').config();
@@ -57,14 +58,15 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
+// app.use('/auth', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.get('/', (req, res) => {
-  return res.render('main/index');
-});
+// app.get('/', (req, res) => {
+//   return res.render('main/index');
+// });
 
 module.exports = app;
