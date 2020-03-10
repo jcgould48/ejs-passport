@@ -66,7 +66,7 @@ module.exports = {
             .then((res) => res.json())
             .then((users) => {
                 const sortedUsers = users.results.sort((a, b) => (a.name.last > b.name.last) ? 1 : ((b.name.last > a.name.last) ? -1 : 0))
-                res.render('main/random', { sortedUsers });
+                res.render('main/randomusers', { sortedUsers });
             })
             .catch((err) => console.log(err));
     },

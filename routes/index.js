@@ -8,7 +8,7 @@ require('../lib/passport');
 
 router.get('/', userController.home);
 router.get('/menu', userController.menuOptions);
-router.get('/random', userController.getRandomUsers);
+router.get('/randomusers', userController.getRandomUsers);
 router.get('/movies', userController.getMovies);
 router.get('/api/users/logout', userController.logout);
 
